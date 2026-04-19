@@ -1,0 +1,112 @@
+{ pkgs, pkgs-stable, systemSettings, ... }:
+{
+  home.packages = (with pkgs; [
+    ### CLI utils ###
+
+    # fetch files from web address
+    wget
+
+    # Linux コナステ dependancies
+    xdg-utils
+    zenity
+
+
+    # get detailed hardware information
+    lshw
+
+    # System Monitor
+    monitor
+
+    #Tool to list open files
+    lsof
+
+    # Anime Tools
+    ani-cli
+    ani-skip
+
+    ### Hardware and Peripherals ###
+
+    # Open-source CLI tool to manage headset settings
+    headsetcontrol
+    # volume control GUI
+    pavucontrol
+    # Command line monitor tool
+    xrandr
+    # Audio patchbay
+    qpwgraph
+    # Disk tool
+    gparted
+    ntfs3g
+    # Remote drive tools
+    cifs-utils
+    nfs-utils
+
+    ### Data manipulation ###
+
+    # wayland clipboard utilities
+    wl-clipboard
+    # Open-source office suite
+#    libreoffice
+    #text editor
+    kdePackages.kate
+    # Zip Files
+    zip
+    unzip
+    p7zip
+    # Ebook Reader
+    foliate
+    # drag and drop utility
+    dragon-drop
+
+    ### Alternate browsers ###
+    ungoogled-chromium
+    firefox
+
+    ### Security ###
+    # Password Manager
+    bitwarden-desktop
+    # VPN
+    proton-vpn
+
+    ### Games/Emulation ###
+    # Wine Emulator
+    winetricks
+    wineWow64Packages.waylandFull
+    bottles
+    heroic
+    # Wine Manager
+    protonplus
+    #osu lazer and etterna from nixpkgs
+    etterna
+    osu-lazer
+
+
+    ### Video/Audio/Pictures ###
+    # Video
+    vlc
+    # Recording
+    obs-studio
+    # Music
+    spotify
+    # Pictures
+    krita
+    gimp
+    qimgv
+
+    ### Backup Utility ###
+    luckybackup
+
+  ])++ (with pkgs-stable; [
+    ### Packages that break often and don't need to be bleeding edge ###
+    parallel-launcher
+    kdePackages.kdenlive
+#    libreoffice
+  ]);
+
+  #Add enviroment path for konaste
+  home.sessionPath = [ "$HOME/.local/bin" ];
+  
+  #Change to custom cursor
+  gtk.cursorTheme.name = "Chiharu";
+  gtk.cursorTheme.size = 12;
+}
