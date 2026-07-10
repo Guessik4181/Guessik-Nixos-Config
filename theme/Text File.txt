@@ -1,0 +1,17 @@
+base00 = "000000"; # Tło systemowe
+      base01 = "1A1A2E"; # Ciemny fiolet
+      base02 = "16213E"; # Zaznaczenie
+      base03 = "4E4E6A"; # Komentarze
+      base04 = "00D1FF"; # Jasny błękit
+      base05 = "E0E0E0"; # Główny tekst
+      base06 = "FFFFFF"; # Bardzo jasny tekst
+      base07 = "5C5CFF"; # Akcent tekstowy
+
+      base08 = "FF00FF"; # Zmienne
+      base09 = "00AAFF"; # Liczby
+      base0A = "61B5FF"; # Klasy
+      base0B = "00FFD1"; # Stringi
+      base0C = "9450DC"; # RegEx
+      base0D = "5656FF"; # Funkcje
+      base0E = "BC13FE"; # Słowa kluczowe
+      base0F = "00FFFF"; # Inne
