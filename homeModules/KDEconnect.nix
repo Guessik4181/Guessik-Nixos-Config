@@ -1,6 +1,6 @@
 { pkgs, systemSettings, ... }:
 {
-home-manager.users.guessik.services.kdeconnect.enable = true;
+services.kdeconnect.enable = true;
 
 networking.firewall = rec {
   allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
