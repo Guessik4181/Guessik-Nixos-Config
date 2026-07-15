@@ -5,8 +5,11 @@
     networkmanager.enable = true;
   };
   
-  networking.firewall.allowedTCPPorts = [
-    25565 #minecraft
+  networking.firewall = {
+  allowedTCPPorts = 25565; #minecraf
+
+  allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
+  allowedUDPPortRanges = allowedTCPPortRanges;
   ];
   
   services.openssh.enable = true;
