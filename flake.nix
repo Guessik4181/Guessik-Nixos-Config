@@ -103,6 +103,11 @@ trusted-public-keys = [
 ];
 
 };
+            environment.systemPackages = [
+              pkgs.nur.repos.MiyakoMeow.lr2oraja-endlessdream
+              pkgs.nur.repos.MiyakoMeow.lampghost
+            ];
+
           })
 
           # Home Manager setup
