@@ -42,6 +42,7 @@
     ###Additional programs###
     homeModules/vscode.nix
     homeModules/obsOverlay.nix
+    homeModules/KDEconnect.nix
 
   ] ++ lib.optionals (systemSettings.hostname == "guessik") [
 
