@@ -11,7 +11,6 @@
     # notification daemon
     homeModules/mako.nix
     # window portal
-    homeModules/xdg-portal.nix
     homeModules/xdg-autostart.nix
     # Java
     homeModules/java.nix
@@ -63,10 +62,13 @@
     VISUAL = "Kate";
   };
 
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   # Custom Cursor
   home.file.".icons/Chiharu".source = ./theme/Chiharu;
+
+  home.file.".config/awesome" = {source = ./awesome; recursive = true;};
   #gtk.cursorTheme.name = "Chiharu";
 }

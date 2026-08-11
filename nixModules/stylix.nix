@@ -24,14 +24,5 @@
 #      name = "Bibata-Modern-Classic";
 #      size = 12;
 #    };
-# This forces KDE to actually apply the image Stylix is pointing to
 };
-  systemd.user.services.fix-kde-wallpaper = {
-    description = "Force KDE to use the Stylix wallpaper";
-    wantedBy = [ "graphical-session.target" ];
-    partOf = [ "graphical-session.target" ];
-    script = ''
-      ${pkgs.kdePackages.plasma-workspace}/bin/plasma-apply-wallpaperimage ${../theme/wallpaper.png}
-    '';
-  };
 }

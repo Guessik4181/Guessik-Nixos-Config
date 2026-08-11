@@ -6,7 +6,7 @@
     nixModules/networking.nix
     nixModules/shells.nix
     nixModules/localization.nix
-    nixModules/kdeplasma.nix
+    nixModules/AwesomeWM.nix
 
     ### Hardware and Peripherals ###
     /etc/nixos/hardware-configuration.nix
@@ -15,6 +15,9 @@
     nixModules/audio.nix
     nixModules/print.nix
     nixModules/bluetooth.nix
+
+    ### window portal ###
+    nixModules/xdg-portal.nix
 
     ### Users ###
     nixModules/users/user_guessik.nix
@@ -45,5 +48,6 @@
   
   system.stateVersion = "26.05";
 
-
+  #tells nixos where xdg thingy is stored
+  environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
 }

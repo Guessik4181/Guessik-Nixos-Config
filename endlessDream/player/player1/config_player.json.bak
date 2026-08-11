@@ -1,12 +1,12 @@
 {
 "id": "player1",
-"name": "PiDeriver",
-"gauge": 4,
+"name": "Guessik",
+"gauge": 0,
 "random": 0,
 "random2": 0,
 "doubleoption": 0,
 "chartReplicationMode": "RIVALCHART",
-"targetid": "RANK_NEXT",
+"targetid": "MAX",
 "targetlist": [
 	"RATE_A-",
 	"RATE_A",
@@ -55,19 +55,19 @@
 "mode": "BEAT_7K",
 "misslayerDuration": 500,
 "lnmode": 0,
-"forcedcnendings": true,
+"forcedcnendings": false,
 "scrollMode": 0,
 "scrollSection": 4,
 "scrollRate": 0.5,
 "longnoteMode": 0,
 "longnoteRate": 1,
-"customJudge": true,
-"keyJudgeWindowRatePerfectGreat": 83,
-"keyJudgeWindowRateGreat": 55,
-"keyJudgeWindowRateGood": 97,
-"scratchJudgeWindowRatePerfectGreat": 83,
-"scratchJudgeWindowRateGreat": 55,
-"scratchJudgeWindowRateGood": 97,
+"customJudge": false,
+"keyJudgeWindowRatePerfectGreat": 400,
+"keyJudgeWindowRateGreat": 400,
+"keyJudgeWindowRateGood": 100,
+"scratchJudgeWindowRatePerfectGreat": 400,
+"scratchJudgeWindowRateGreat": 400,
+"scratchJudgeWindowRateGood": 100,
 "mineMode": 0,
 "bpmguide": false,
 "extranoteType": 0,
@@ -76,130 +76,434 @@
 "showjudgearea": false,
 "markprocessednote": false,
 "hranThresholdBPM": 120,
-"gaugeAutoShift": 3,
-"bottomShiftableGauge": 2,
+"gaugeAutoShift": 0,
+"bottomShiftableGauge": 0,
 "autosavereplay": [ 0, 0, 0, 0 ],
 "sevenToNinePattern": 0,
 "sevenToNineType": 0,
 "exitPressDuration": 1000,
 "isGuideSE": false,
 "isWindowHold": false,
-"isRandomSelect": true,
+"isRandomSelect": false,
 "skin": [
 	{
-		"path": "skin/Pi_ECFN/play/play7.luaskin",
+		"path": "skin/Rm-skin-main/play7main.luaskin",
 		"properties": {
 			"option": [
 				{
-					"name": "プレーサイド",
-					"value": 920
+					"name": "Scratch Side",
+					"value": 900
 				},
 				{
-					"name": "スコアグラフ",
-					"value": 901
-				},
-				{
-					"name": "スコアグラフ位置",
+					"name": "Lane Align",
 					"value": 902
 				},
 				{
-					"name": "ジャッジカウント",
+					"name": "Lane Frame",
+					"value": 905
+				},
+				{
+					"name": "Lane Center",
 					"value": 906
 				},
 				{
-					"name": "手元用クロマキー",
-					"value": 924
+					"name": "Notes Width",
+					"value": 908
 				},
 				{
-					"name": "スコア差分",
-					"value": 907
+					"name": "Notes Height",
+					"value": 917
 				},
 				{
-					"name": "判定タイミング表示",
-					"value": 912
+					"name": "Judge Display",
+					"value": 910
 				},
 				{
-					"name": "判定タイミング値表示(グラフ必須)",
-					"value": 915
+					"name": "Input Device",
+					"value": 923
 				},
 				{
-					"name": "ステージファイル表示",
-					"value": 926
+					"name": "Keybeam Display",
+					"value": 925
 				},
 				{
-					"name": "BGA表示方法",
-					"value": 928
+					"name": "Keybeam Height Multiplier",
+					"value": 927
 				},
 				{
-					"name": "閉店アニメ",
-					"value": 930
-				},
-				{
-					"name": "判定文字規格",
+					"name": "Keybeam Alpha Multiplier",
 					"value": 932
+				},
+				{
+					"name": "Target",
+					"value": 937
+				},
+				{
+					"name": "Target2 (Left)",
+					"value": 940
+				},
+				{
+					"name": "Hiterror Visualizer",
+					"value": 948
+				},
+				{
+					"name": "Score Rate",
+					"value": 942
+				},
+				{
+					"name": "Fast/Slow Type",
+					"value": 944
+				},
+				{
+					"name": "Fast/Slow Counter",
+					"value": 950
+				},
+				{
+					"name": "Fast/Slow Threshold",
+					"value": 952
+				},
+				{
+					"name": "Gauge Display",
+					"value": 954
+				},
+				{
+					"name": "Bomb Under the Gauge",
+					"value": 956
+				},
+				{
+					"name": "Bomb Property",
+					"value": 958
+				},
+				{
+					"name": "Hi-Speed Type",
+					"value": 960
+				},
+				{
+					"name": "Mascot Display",
+					"value": 962
 				}
 			],
 			"file": [
 				{
-					"name": "Frame",
-					"path": "Default"
+					"name": "Mascot",
+					"path": "!_Default.png"
 				},
 				{
-					"name": "Note",
-					"path": "photon.png"
+					"name": "Background Image",
+					"path": "Black.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Notes",
+					"path": "White_#Bordered_#f3f3f3.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Long-Start",
+					"path": "White_#Partition_#f3f3f3.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Long-Body",
+					"path": "White_#Partition_#f3f3f3.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Long-Active",
+					"path": "White_#Partition_#f3f3f3.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Notes",
+					"path": "LightBlue_#Bordered_#35eaff.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Long-Start",
+					"path": "LightBlue_#Partition_#35eaff.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Long-Body",
+					"path": "LightBlue_#Partition_#35eaff.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Long-Active",
+					"path": "LightBlue_#Partition_#35eaff.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Notes",
+					"path": "Yellow_#Bordered_#ffde35.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Long-Start",
+					"path": "Yellow_#Partition_#ffde35.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Long-Body",
+					"path": "Yellow_#Partition_#ffde35.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Long-Active",
+					"path": "Yellow_#Partition_#ffde35.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Notes",
+					"path": "Green_#Bordered_#5def35.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Long-Start",
+					"path": "Green_#Partition_#5def35.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Long-Body",
+					"path": "Green_#Partition_#5def35.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Long-Active",
+					"path": "Green_#Partition_#5def35.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : White-Notes",
+					"path": "White_#f3f3f3.png"
+				},
+				{
+					"name": "Custom : White-Long-Start",
+					"path": "White_#f3f3f3.png"
+				},
+				{
+					"name": "Custom : White-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : White-Long-Body",
+					"path": "White_#f3f3f3.png"
+				},
+				{
+					"name": "Custom : White-Long-Active",
+					"path": "White_#f3f3f3.png"
+				},
+				{
+					"name": "Custom : White-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Blue-Notes",
+					"path": "LightBlue_#35eaff.png"
+				},
+				{
+					"name": "Custom : Blue-Long-Start",
+					"path": "LightBlue_#35eaff.png"
+				},
+				{
+					"name": "Custom : Blue-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Blue-Long-Body",
+					"path": "LightBlue_#35eaff.png"
+				},
+				{
+					"name": "Custom : Blue-Long-Active",
+					"path": "LightBlue_#35eaff.png"
+				},
+				{
+					"name": "Custom : Blue-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Yellow-Notes",
+					"path": "Yellow_#ffde35.png"
+				},
+				{
+					"name": "Custom : Yellow-Long-Start",
+					"path": "Yellow_#ffde35.png"
+				},
+				{
+					"name": "Custom : Yellow-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Yellow-Long-Body",
+					"path": "Yellow_#ffde35.png"
+				},
+				{
+					"name": "Custom : Yellow-Long-Active",
+					"path": "Yellow_#ffde35.png"
+				},
+				{
+					"name": "Custom : Yellow-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Scratch-Notes",
+					"path": "Green_#5def35.png"
+				},
+				{
+					"name": "Custom : Scratch-Long-Start",
+					"path": "Green_#5def35.png"
+				},
+				{
+					"name": "Custom : Scratch-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Scratch-Long-Body",
+					"path": "Green_#5def35.png"
+				},
+				{
+					"name": "Custom : Scratch-Long-Active",
+					"path": "Green_#5def35.png"
+				},
+				{
+					"name": "Custom : Scratch-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Keybeam",
+					"path": "Default_White_#Borderd.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Keybeam",
+					"path": "Default_Blue_#Borderd.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Keybeam",
+					"path": "Default_Yellow_#Borderd.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Keybeam",
+					"path": "Default_Scratch_#Borderd.png"
+				},
+				{
+					"name": "Custom : White-Keybeam",
+					"path": "Blue.png"
+				},
+				{
+					"name": "Custom : Blue-Keybeam",
+					"path": "Blue.png"
+				},
+				{
+					"name": "Custom : Yellow-Keybeam",
+					"path": "Blue.png"
+				},
+				{
+					"name": "Custom : Scratch-Keybeam",
+					"path": "Blue.png"
+				},
+				{
+					"name": "Type A_B : Judge & Combo Number",
+					"path": "Default_#ColorType_B.png"
+				},
+				{
+					"name": "Type B_C_D : Combo Number & Score Rate",
+					"path": "Default_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Perfect",
+					"path": "x50%_PG_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Great",
+					"path": "x50%_GR_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Good",
+					"path": "x50%_GD_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Bad",
+					"path": "x50%_BD_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Poor",
+					"path": "x50%_PR_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Miss",
+					"path": "x50%_MS_Rounded.png"
+				},
+				{
+					"name": "Gauge: Hazard",
+					"path": "Blue1_#389eff.png"
+				},
+				{
+					"name": "Gauge: Ex-Hard",
+					"path": "Yellow1_#ffff40.png"
+				},
+				{
+					"name": "Gauge: Hard",
+					"path": "White1_#ffffff.png"
+				},
+				{
+					"name": "Gauge: Normal",
+					"path": "LightBlue1_#74f7f7.png"
+				},
+				{
+					"name": "Gauge: Easy",
+					"path": "Green1_#80ff40.png"
+				},
+				{
+					"name": "Gauge: Assist-Easy",
+					"path": "Pink1_#ffb6c1.png"
+				},
+				{
+					"name": "Judge Line",
+					"path": "White4_#a3d1ff.png"
 				},
 				{
 					"name": "Bomb",
-					"path": "PinkBomb.png"
+					"path": "!_x150%_White_clear_ring_SCUROed.png"
 				},
 				{
-					"name": "Truntable",
-					"path": "TB_AC Pink.png"
+					"name": "Lane Cover",
+					"path": "WaterColor_LightBlue.png"
 				},
 				{
-					"name": "Gauge",
-					"path": "hex.png"
+					"name": "Fast/Slow: Character",
+					"path": "Fast_Slow.png"
 				},
 				{
-					"name": "Judge",
-					"path": "vdl.png"
+					"name": "Fast/Slow: Number",
+					"path": "Default.png"
 				},
 				{
-					"name": "LegacyJudge",
-					"path": "default.png"
+					"name": "Mybest Number",
+					"path": "Default.png"
 				},
 				{
-					"name": "Laser",
-					"path": "veryshort_pink.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "kurumiruku_CoverPink.png"
-				},
-				{
-					"name": "Lift",
-					"path": "kurumiruku_CoverPink-L1.png"
-				},
-				{
-					"name": "GraphBG",
-					"path": "GraphBG_hiyoyo.png"
-				},
-				{
-					"name": "glow",
-					"path": "Sz.png"
-				},
-				{
-					"name": "ProgressBar",
-					"path": "Sz.png"
-				},
-				{
-					"name": "FullCombo",
-					"path": "#DefaultPink.png"
+					"name": "Target Number",
+					"path": "Default.png"
 				}
 			],
 			"offset": [
 				{
-					"name": "Laser Offset",
+					"name": "Judge Position",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -208,7 +512,7 @@
 					"a": 0
 				},
 				{
-					"name": "Bomb Offset",
+					"name": "Combo Number Position",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -217,7 +521,7 @@
 					"a": 0
 				},
 				{
-					"name": "Judge Count Offset",
+					"name": "F/S Position",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -226,7 +530,7 @@
 					"a": 0
 				},
 				{
-					"name": "BGA Brightness Offset",
+					"name": "Target Position",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -235,7 +539,7 @@
 					"a": 0
 				},
 				{
-					"name": "Lane Background Offset",
+					"name": "Target2 Position",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -244,7 +548,7 @@
 					"a": 0
 				},
 				{
-					"name": "ScoreDiff Offset",
+					"name": "Score Rate Position",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -253,7 +557,7 @@
 					"a": 0
 				},
 				{
-					"name": "RealTimeJudge Offset",
+					"name": "Hit Error Visualizer Position",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -262,7 +566,214 @@
 					"a": 0
 				},
 				{
-					"name": "judgetiming_window Offset",
+					"name": "F/S Count Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judgeline Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judgeline Height",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Bomb Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Gauge Position and Size",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Background Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "BGA Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Barline Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judge PG Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judge GR Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judge GD Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judge BD Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judge PR Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judge MS Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Combo Number Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "F/S Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Target Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Target2 Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Score Rate Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Hit Error Visualizer Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Hit Error Visualizer BG Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "F/S Count Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Bomb Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Gauge Transparency (-255 to 0)",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -312,397 +823,56 @@
 	{
 		"path": "skin/default/play5.json",
 		"properties": {
-			"option": [
-				{
-					"name": "Play Side",
-					"value": 920
-				},
-				{
-					"name": "Score Graph",
-					"value": 900
-				},
-				{
-					"name": "Judge Count",
-					"value": 905
-				},
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Note",
-					"path": "photon.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
+			"option": [],
+			"file": [],
+			"offset": []
 		}
 	},
 	{
 		"path": "skin/default/play14.json",
 		"properties": {
-			"option": [
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Note",
-					"path": "photon.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
+			"option": [],
+			"file": [],
+			"offset": []
 		}
 	},
 	{
 		"path": "skin/default/play10.json",
 		"properties": {
-			"option": [
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Note",
-					"path": "photon.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
+			"option": [],
+			"file": [],
+			"offset": []
 		}
 	},
 	{
 		"path": "skin/default/play9.json",
 		"properties": {
-			"option": [
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "POMYU Chara 1P",
-					"path": "Off"
-				},
-				{
-					"name": "POMYU Chara 2P",
-					"path": "Off"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/Pi_ECFN/select/select.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "シャッター",
-					"value": 910
-				},
-				{
-					"name": "動画を使用する",
-					"value": 920
-				},
-				{
-					"name": "判定詳細ウィンドウを使用する",
-					"value": 940
-				},
-				{
-					"name": "IRウィンドウを使用する",
-					"value": 930
-				},
-				{
-					"name": "IRウィンドウ位置",
-					"value": 932
-				}
-			],
-			"file": [
-				{
-					"name": "BG",
-					"path": "Random"
-				},
-				{
-					"name": "MV",
-					"path": "default-Pink.mp4"
-				}
-			],
+			"option": [],
+			"file": [],
 			"offset": []
 		}
 	},
 	{
-		"path": "skin/Pi_ECFN/decide/decide.luaskin",
+		"path": "skin/default/select.json",
 		"properties": {
 			"option": [],
-			"file": [
-				{
-					"name": "BG",
-					"path": "Random"
-				}
-			],
+			"file": [],
 			"offset": []
 		}
 	},
 	{
-		"path": "skin/Pi_ECFN/RESULT/result.luaskin",
+		"path": "skin/default/decide/decide.luaskin",
 		"properties": {
-			"option": [
-				{
-					"name": "LEGACY_VER",
-					"value": 923
-				},
-				{
-					"name": "Playside",
-					"value": 918
-				},
-				{
-					"name": "ExtendFrame",
-					"value": 916
-				},
-				{
-					"name": "LightBG",
-					"value": 920
-				},
-				{
-					"name": "Stage_file",
-					"value": 930
-				},
-				{
-					"name": "シャッター",
-					"value": 940
-				},
-				{
-					"name": "FS_list",
-					"value": 910
-				},
-				{
-					"name": "Particle",
-					"value": 912
-				},
-				{
-					"name": "CLEAR_EFFECT",
-					"value": 914
-				}
-			],
-			"file": [
-				{
-					"name": "---AAA",
-					"path": "Random"
-				},
-				{
-					"name": "---AA",
-					"path": "Random"
-				},
-				{
-					"name": "---A",
-					"path": "Random"
-				},
-				{
-					"name": "---RANK",
-					"path": "DEFAULT.png"
-				}
-			],
+			"option": [],
+			"file": [],
+			"offset": []
+		}
+	},
+	{
+		"path": "skin/default/result/result.luaskin",
+		"properties": {
+			"option": [],
+			"file": [],
 			"offset": []
 		}
 	},
@@ -743,215 +913,27 @@
 		"properties": null
 	},
 	{
-		"path": "skin/Pi_ECFN/RESULT/course_result.luaskin",
+		"path": "skin/default/graderesult.json",
 		"properties": {
-			"option": [
-				{
-					"name": "LEGACY_VER",
-					"value": 923
-				},
-				{
-					"name": "Playside",
-					"value": 918
-				},
-				{
-					"name": "ExtendFrame",
-					"value": 916
-				},
-				{
-					"name": "LightBG",
-					"value": 920
-				},
-				{
-					"name": "Stage_file",
-					"value": 930
-				},
-				{
-					"name": "シャッター",
-					"value": 940
-				},
-				{
-					"name": "FS_list",
-					"value": 910
-				},
-				{
-					"name": "Particle",
-					"value": 912
-				},
-				{
-					"name": "CLEAR_EFFECT",
-					"value": 914
-				}
-			],
-			"file": [
-				{
-					"name": "---AAA",
-					"path": "Random"
-				},
-				{
-					"name": "---AA",
-					"path": "Random"
-				},
-				{
-					"name": "---A",
-					"path": "Random"
-				},
-				{
-					"name": "---RANK",
-					"path": "DEFAULT.png"
-				}
-			],
+			"option": [],
+			"file": [],
 			"offset": []
 		}
 	},
 	{
 		"path": "skin/default/play24.json",
 		"properties": {
-			"option": [
-				{
-					"name": "Lane Geometry",
-					"value": 920
-				},
-				{
-					"name": "Score Graph",
-					"value": 900
-				},
-				{
-					"name": "Judge Count",
-					"value": 905
-				},
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Theme",
-					"path": "blue.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
+			"option": [],
+			"file": [],
+			"offset": []
 		}
 	},
 	{
 		"path": "skin/default/play24double.json",
 		"properties": {
-			"option": [
-				{
-					"name": "Lane Geometry",
-					"value": 920
-				},
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Theme",
-					"path": "blue.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
+			"option": [],
+			"file": [],
+			"offset": []
 		}
 	},
 	{
@@ -1008,7 +990,7 @@
 				},
 				{
 					"name": "Laser",
-					"path": "short.png"
+					"path": "default.png"
 				},
 				{
 					"name": "Lanecover",
@@ -1054,440 +1036,6 @@
 				},
 				{
 					"name": "Lane Background Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/ECFN/play/play7.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "プレーサイド",
-					"value": 920
-				},
-				{
-					"name": "スコアグラフ",
-					"value": 900
-				},
-				{
-					"name": "スコアグラフ位置",
-					"value": 902
-				},
-				{
-					"name": "ジャッジカウント",
-					"value": 905
-				},
-				{
-					"name": "手元用クロマキー",
-					"value": 924
-				},
-				{
-					"name": "スコア差分",
-					"value": 907
-				},
-				{
-					"name": "判定タイミング表示",
-					"value": 910
-				},
-				{
-					"name": "判定タイミング値表示(グラフ必須)",
-					"value": 915
-				},
-				{
-					"name": "ステージファイル表示",
-					"value": 926
-				},
-				{
-					"name": "BGA表示方法",
-					"value": 929
-				},
-				{
-					"name": "閉店アニメ",
-					"value": 930
-				},
-				{
-					"name": "判定文字規格",
-					"value": 932
-				}
-			],
-			"file": [
-				{
-					"name": "Frame",
-					"path": "Default"
-				},
-				{
-					"name": "Note",
-					"path": "simple.png"
-				},
-				{
-					"name": "Bomb",
-					"path": "LR2.png"
-				},
-				{
-					"name": "Truntable",
-					"path": "TB_AC.png"
-				},
-				{
-					"name": "Gauge",
-					"path": "default+.png"
-				},
-				{
-					"name": "Judge",
-					"path": "test.png"
-				},
-				{
-					"name": "LegacyJudge",
-					"path": "AC_B.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "Sz.png"
-				},
-				{
-					"name": "Lift",
-					"path": "Sz.png"
-				},
-				{
-					"name": "GraphBG",
-					"path": "default.png"
-				},
-				{
-					"name": "glow",
-					"path": "Default.png"
-				},
-				{
-					"name": "ProgressBar",
-					"path": "Sz.png"
-				},
-				{
-					"name": "FullCombo",
-					"path": "#Default.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "Laser Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Bomb Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Count Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "BGA Brightness Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Lane Background Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "ScoreDiff Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "RealTimeJudge Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "judgetiming_window Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/ECFN/play/play7wide.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "プレーサイド",
-					"value": 920
-				},
-				{
-					"name": "スコアグラフ",
-					"value": 900
-				},
-				{
-					"name": "ジャッジカウント",
-					"value": 905
-				},
-				{
-					"name": "手元用クロマキー",
-					"value": 924
-				},
-				{
-					"name": "スコア差分",
-					"value": 907
-				},
-				{
-					"name": "判定タイミング表示",
-					"value": 910
-				},
-				{
-					"name": "判定タイミング値表示(グラフ必須)",
-					"value": 915
-				},
-				{
-					"name": "ステージファイル表示",
-					"value": 926
-				},
-				{
-					"name": "BGA表示方法",
-					"value": 929
-				},
-				{
-					"name": "閉店アニメ",
-					"value": 930
-				},
-				{
-					"name": "判定文字サイズ",
-					"value": 932
-				}
-			],
-			"file": [
-				{
-					"name": "Frame",
-					"path": "default.png"
-				},
-				{
-					"name": "Note",
-					"path": "simple.png"
-				},
-				{
-					"name": "Bomb",
-					"path": "LR2.png"
-				},
-				{
-					"name": "Truntable",
-					"path": "TB_AC.png"
-				},
-				{
-					"name": "Gauge",
-					"path": "default+.png"
-				},
-				{
-					"name": "Judge",
-					"path": "AC_B.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "Sz.png"
-				},
-				{
-					"name": "Lift",
-					"path": "Sz.png"
-				},
-				{
-					"name": "GraphBG",
-					"path": "default.png"
-				},
-				{
-					"name": "glow",
-					"path": "Default.png"
-				},
-				{
-					"name": "FullCombo",
-					"path": "#Default.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "Laser Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Bomb Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Count Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "BGA Brightness Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Lane Background Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "ScoreDiff Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "RealTimeJudge Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "judgetiming_window Offset",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -1896,1142 +1444,423 @@
 		}
 	},
 	{
-		"path": "skin/Pi_ECFN/play/play7.luaskin",
+		"path": "skin/Rm-skin-main/play7main.luaskin",
 		"properties": {
 			"option": [
 				{
-					"name": "プレーサイド",
-					"value": 920
-				},
-				{
-					"name": "スコアグラフ",
-					"value": 901
-				},
-				{
-					"name": "スコアグラフ位置",
-					"value": 902
-				},
-				{
-					"name": "ジャッジカウント",
-					"value": 906
-				},
-				{
-					"name": "手元用クロマキー",
-					"value": 924
-				},
-				{
-					"name": "スコア差分",
-					"value": 907
-				},
-				{
-					"name": "判定タイミング表示",
-					"value": 912
-				},
-				{
-					"name": "判定タイミング値表示(グラフ必須)",
-					"value": 915
-				},
-				{
-					"name": "ステージファイル表示",
-					"value": 926
-				},
-				{
-					"name": "BGA表示方法",
-					"value": 928
-				},
-				{
-					"name": "閉店アニメ",
-					"value": 930
-				},
-				{
-					"name": "判定文字規格",
-					"value": 932
-				}
-			],
-			"file": [
-				{
-					"name": "Frame",
-					"path": "Default"
-				},
-				{
-					"name": "Note",
-					"path": "photon.png"
-				},
-				{
-					"name": "Bomb",
-					"path": "PinkBomb.png"
-				},
-				{
-					"name": "Truntable",
-					"path": "TB_AC Pink.png"
-				},
-				{
-					"name": "Gauge",
-					"path": "hex.png"
-				},
-				{
-					"name": "Judge",
-					"path": "vdl.png"
-				},
-				{
-					"name": "LegacyJudge",
-					"path": "default.png"
-				},
-				{
-					"name": "Laser",
-					"path": "veryshort_pink.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "kurumiruku_CoverPink.png"
-				},
-				{
-					"name": "Lift",
-					"path": "kurumiruku_CoverPink-L1.png"
-				},
-				{
-					"name": "GraphBG",
-					"path": "GraphBG_hiyoyo.png"
-				},
-				{
-					"name": "glow",
-					"path": "Sz.png"
-				},
-				{
-					"name": "ProgressBar",
-					"path": "Sz.png"
-				},
-				{
-					"name": "FullCombo",
-					"path": "#DefaultPink.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "Laser Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Bomb Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Count Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "BGA Brightness Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Lane Background Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "ScoreDiff Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "RealTimeJudge Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "judgetiming_window Offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/default/play5.json",
-		"properties": {
-			"option": [
-				{
-					"name": "Play Side",
-					"value": 920
-				},
-				{
-					"name": "Score Graph",
+					"name": "Scratch Side",
 					"value": 900
 				},
 				{
-					"name": "Judge Count",
+					"name": "Lane Align",
+					"value": 902
+				},
+				{
+					"name": "Lane Frame",
 					"value": 905
 				},
 				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Note",
-					"path": "photon.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/default/play14.json",
-		"properties": {
-			"option": [
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Note",
-					"path": "photon.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/default/play10.json",
-		"properties": {
-			"option": [
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Note",
-					"path": "photon.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/default/play9.json",
-		"properties": {
-			"option": [
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "POMYU Chara 1P",
-					"path": "Off"
-				},
-				{
-					"name": "POMYU Chara 2P",
-					"path": "Off"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/default/select.json",
-		"properties": {
-			"option": [],
-			"file": [
-				{
-					"name": "Background",
-					"path": "select2.png"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/ECFN/select/select.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "シャッター",
-					"value": 910
-				},
-				{
-					"name": "動画を使用する",
-					"value": 920
-				},
-				{
-					"name": "判定詳細ウィンドウを使用する",
-					"value": 940
-				},
-				{
-					"name": "IRウィンドウを使用する",
-					"value": 930
-				},
-				{
-					"name": "IRウィンドウ位置",
-					"value": 932
-				}
-			],
-			"file": [
-				{
-					"name": "BG",
-					"path": "Default.png"
-				},
-				{
-					"name": "MV",
-					"path": "default.mp4"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/ECFN/select/select.json",
-		"properties": {
-			"option": [],
-			"file": [],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/ModernChic/musicselect.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "背景の種類",
-					"value": 900
-				},
-				{
-					"name": "画像フォント",
-					"value": 902
-				},
-				{
-					"name": "ステージ＆バナーファイル",
-					"value": 904
-				},
-				{
-					"name": "曲リストの並び",
+					"name": "Lane Center",
 					"value": 906
 				},
 				{
-					"name": "サブタイトルのスクロール",
-					"value": 910
+					"name": "Notes Width",
+					"value": 908
 				},
 				{
-					"name": "ビーム（装飾）",
-					"value": 912
-				},
-				{
-					"name": "開始パターン",
-					"value": 913
-				},
-				{
-					"name": "IR情報表示",
-					"value": 915
-				},
-				{
-					"name": "サイドメニューの開閉状態を保持する",
+					"name": "Notes Height",
 					"value": 917
 				},
 				{
-					"name": "スキン更新チェック",
-					"value": 920
-				},
-				{
-					"name": "言語",
-					"value": 921
-				},
-				{
-					"name": "プレイ履歴表示",
-					"value": 924
-				},
-				{
-					"name": "キーマップ表示",
-					"value": 927
-				},
-				{
-					"name": "背景ローテーション",
-					"value": 928
-				},
-				{
-					"name": "BPM連動キャラクター",
-					"value": 931
-				}
-			],
-			"file": [
-				{
-					"name": "背景（静止画）Select/bg/image/*.png",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（動画）Select/bg/movie/*.mp4",
-					"path": "BGmovie01.mp4"
-				},
-				{
-					"name": "BPM連動キャラクター Root/image",
-					"path": "yuki.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "背景の明るさ 0~255 (255で真っ暗になります)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/Pi_ECFN/select/select.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "シャッター",
+					"name": "Judge Display",
 					"value": 910
 				},
 				{
-					"name": "動画を使用する",
-					"value": 920
+					"name": "Input Device",
+					"value": 923
 				},
 				{
-					"name": "判定詳細ウィンドウを使用する",
+					"name": "Keybeam Display",
+					"value": 925
+				},
+				{
+					"name": "Keybeam Height Multiplier",
+					"value": 927
+				},
+				{
+					"name": "Keybeam Alpha Multiplier",
+					"value": 932
+				},
+				{
+					"name": "Target",
+					"value": 937
+				},
+				{
+					"name": "Target2 (Left)",
 					"value": 940
 				},
 				{
-					"name": "IRウィンドウを使用する",
-					"value": 930
+					"name": "Hiterror Visualizer",
+					"value": 948
 				},
 				{
-					"name": "IRウィンドウ位置",
-					"value": 932
+					"name": "Score Rate",
+					"value": 942
+				},
+				{
+					"name": "Fast/Slow Type",
+					"value": 944
+				},
+				{
+					"name": "Fast/Slow Counter",
+					"value": 950
+				},
+				{
+					"name": "Fast/Slow Threshold",
+					"value": 952
+				},
+				{
+					"name": "Gauge Display",
+					"value": 954
+				},
+				{
+					"name": "Bomb Under the Gauge",
+					"value": 956
+				},
+				{
+					"name": "Bomb Property",
+					"value": 958
+				},
+				{
+					"name": "Hi-Speed Type",
+					"value": 960
+				},
+				{
+					"name": "Mascot Display",
+					"value": 962
 				}
 			],
 			"file": [
 				{
-					"name": "BG",
-					"path": "Random"
+					"name": "Mascot",
+					"path": "!_Default.png"
 				},
 				{
-					"name": "MV",
-					"path": "default-Pink.mp4"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/default/decide/decide.luaskin",
-		"properties": {
-			"option": [],
-			"file": [],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/ECFN/decide/decide.luaskin",
-		"properties": {
-			"option": [],
-			"file": [
+					"name": "Background Image",
+					"path": "Black.png"
+				},
 				{
-					"name": "BG",
+					"name": "Temeplate_7key : White-Notes",
+					"path": "White_#Bordered_#f3f3f3.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Long-Start",
+					"path": "White_#Partition_#f3f3f3.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Long-Body",
+					"path": "White_#Partition_#f3f3f3.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Long-Active",
+					"path": "White_#Partition_#f3f3f3.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Notes",
+					"path": "LightBlue_#Bordered_#35eaff.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Long-Start",
+					"path": "LightBlue_#Partition_#35eaff.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Long-Body",
+					"path": "LightBlue_#Partition_#35eaff.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Long-Active",
+					"path": "LightBlue_#Partition_#35eaff.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Notes",
+					"path": "Yellow_#Bordered_#ffde35.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Long-Start",
+					"path": "Yellow_#Partition_#ffde35.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Long-Body",
+					"path": "Yellow_#Partition_#ffde35.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Long-Active",
+					"path": "Yellow_#Partition_#ffde35.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Notes",
+					"path": "Green_#Bordered_#5def35.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Long-Start",
+					"path": "Green_#Partition_#5def35.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Long-Body",
+					"path": "Green_#Partition_#5def35.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Long-Active",
+					"path": "Green_#Partition_#5def35.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : White-Notes",
+					"path": "White_#f3f3f3.png"
+				},
+				{
+					"name": "Custom : White-Long-Start",
+					"path": "White_#f3f3f3.png"
+				},
+				{
+					"name": "Custom : White-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : White-Long-Body",
+					"path": "White_#f3f3f3.png"
+				},
+				{
+					"name": "Custom : White-Long-Active",
+					"path": "White_#f3f3f3.png"
+				},
+				{
+					"name": "Custom : White-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Blue-Notes",
+					"path": "LightBlue_#35eaff.png"
+				},
+				{
+					"name": "Custom : Blue-Long-Start",
+					"path": "LightBlue_#35eaff.png"
+				},
+				{
+					"name": "Custom : Blue-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Blue-Long-Body",
+					"path": "LightBlue_#35eaff.png"
+				},
+				{
+					"name": "Custom : Blue-Long-Active",
+					"path": "LightBlue_#35eaff.png"
+				},
+				{
+					"name": "Custom : Blue-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Yellow-Notes",
+					"path": "Yellow_#ffde35.png"
+				},
+				{
+					"name": "Custom : Yellow-Long-Start",
+					"path": "Yellow_#ffde35.png"
+				},
+				{
+					"name": "Custom : Yellow-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Yellow-Long-Body",
+					"path": "Yellow_#ffde35.png"
+				},
+				{
+					"name": "Custom : Yellow-Long-Active",
+					"path": "Yellow_#ffde35.png"
+				},
+				{
+					"name": "Custom : Yellow-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Scratch-Notes",
+					"path": "Green_#5def35.png"
+				},
+				{
+					"name": "Custom : Scratch-Long-Start",
+					"path": "Green_#5def35.png"
+				},
+				{
+					"name": "Custom : Scratch-Long-End",
+					"path": "Off.png"
+				},
+				{
+					"name": "Custom : Scratch-Long-Body",
+					"path": "Green_#5def35.png"
+				},
+				{
+					"name": "Custom : Scratch-Long-Active",
+					"path": "Green_#5def35.png"
+				},
+				{
+					"name": "Custom : Scratch-Mine",
+					"path": "Off.png"
+				},
+				{
+					"name": "Temeplate_7key : White-Keybeam",
+					"path": "Default_White_#Borderd.png"
+				},
+				{
+					"name": "Temeplate_7key : Blue-Keybeam",
+					"path": "Default_Blue_#Borderd.png"
+				},
+				{
+					"name": "Temeplate_7key : Yellow-Keybeam",
+					"path": "Default_Yellow_#Borderd.png"
+				},
+				{
+					"name": "Temeplate_7key : Scratch-Keybeam",
+					"path": "Default_Scratch_#Borderd.png"
+				},
+				{
+					"name": "Custom : White-Keybeam",
+					"path": "Blue.png"
+				},
+				{
+					"name": "Custom : Blue-Keybeam",
+					"path": "Blue.png"
+				},
+				{
+					"name": "Custom : Yellow-Keybeam",
+					"path": "Blue.png"
+				},
+				{
+					"name": "Custom : Scratch-Keybeam",
+					"path": "Blue.png"
+				},
+				{
+					"name": "Type A_B : Judge & Combo Number",
+					"path": "Default_#ColorType_B.png"
+				},
+				{
+					"name": "Type B_C_D : Combo Number & Score Rate",
+					"path": "Default_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Perfect",
+					"path": "x50%_PG_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Great",
+					"path": "x50%_GR_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Good",
+					"path": "x50%_GD_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Bad",
+					"path": "x50%_BD_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Poor",
+					"path": "x50%_PR_Rounded.png"
+				},
+				{
+					"name": "Type C_D : Judge : Miss",
+					"path": "x50%_MS_Rounded.png"
+				},
+				{
+					"name": "Gauge: Hazard",
+					"path": "Blue1_#389eff.png"
+				},
+				{
+					"name": "Gauge: Ex-Hard",
+					"path": "Yellow1_#ffff40.png"
+				},
+				{
+					"name": "Gauge: Hard",
+					"path": "White1_#ffffff.png"
+				},
+				{
+					"name": "Gauge: Normal",
+					"path": "LightBlue1_#74f7f7.png"
+				},
+				{
+					"name": "Gauge: Easy",
+					"path": "Green1_#80ff40.png"
+				},
+				{
+					"name": "Gauge: Assist-Easy",
+					"path": "Pink1_#ffb6c1.png"
+				},
+				{
+					"name": "Judge Line",
+					"path": "White4_#a3d1ff.png"
+				},
+				{
+					"name": "Bomb",
+					"path": "!_x150%_White_clear_ring_SCUROed.png"
+				},
+				{
+					"name": "Lane Cover",
+					"path": "WaterColor_LightBlue.png"
+				},
+				{
+					"name": "Fast/Slow: Character",
+					"path": "Fast_Slow.png"
+				},
+				{
+					"name": "Fast/Slow: Number",
+					"path": "Default.png"
+				},
+				{
+					"name": "Mybest Number",
+					"path": "Default.png"
+				},
+				{
+					"name": "Target Number",
 					"path": "Default.png"
 				}
 			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/ModernChic/decide.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "背景の種類",
-					"value": 900
-				},
-				{
-					"name": "画像フォント",
-					"value": 902
-				},
-				{
-					"name": "ステージファイル",
-					"value": 905
-				},
-				{
-					"name": "ノーツ分布グラフ",
-					"value": 907
-				},
-				{
-					"name": "ステージ数表示",
-					"value": 908
-				},
-				{
-					"name": "お役立ち情報表示",
-					"value": 911
-				}
-			],
-			"file": [
-				{
-					"name": "背景（静止画）Decide/bg/image/*.png",
-					"path": "sample.png"
-				},
-				{
-					"name": "背景（動画）Decide/bg/movie/*.mp4",
-					"path": "sample.mp4"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/Pi_ECFN/decide/decide.luaskin",
-		"properties": {
-			"option": [],
-			"file": [
-				{
-					"name": "BG",
-					"path": "Random"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/default/result/result.luaskin",
-		"properties": {
-			"option": [],
-			"file": [],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/ECFN/RESULT/result.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "LEGACY_VER",
-					"value": 923
-				},
-				{
-					"name": "Playside",
-					"value": 918
-				},
-				{
-					"name": "ExtendFrame",
-					"value": 916
-				},
-				{
-					"name": "LightBG",
-					"value": 920
-				},
-				{
-					"name": "Stage_file",
-					"value": 930
-				},
-				{
-					"name": "シャッター",
-					"value": 940
-				},
-				{
-					"name": "FS_list",
-					"value": 910
-				},
-				{
-					"name": "Particle",
-					"value": 912
-				},
-				{
-					"name": "CLEAR_EFFECT",
-					"value": 914
-				}
-			],
-			"file": [
-				{
-					"name": "---AAA",
-					"path": "Random"
-				},
-				{
-					"name": "---AA",
-					"path": "Random"
-				},
-				{
-					"name": "---A",
-					"path": "Random"
-				},
-				{
-					"name": "---RANK",
-					"path": "DEFAULT.png"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/ECFN/RESULT/result2.luaskin",
-		"properties": {
-			"option": [],
-			"file": [
-				{
-					"name": "---AAA",
-					"path": "Random"
-				},
-				{
-					"name": "---AA",
-					"path": "Random"
-				},
-				{
-					"name": "---A",
-					"path": "Random"
-				},
-				{
-					"name": "---RANK",
-					"path": "DEFAULT.png"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/ModernChic/result.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "画像フォント",
-					"value": 900
-				},
-				{
-					"name": "グラフ&スコア表示位置",
-					"value": 902
-				},
-				{
-					"name": "項目表示切り替え",
-					"value": 904
-				},
-				{
-					"name": "IRメニュー表示",
-					"value": 927
-				},
-				{
-					"name": "IRメニューの種類",
-					"value": 928
-				},
-				{
-					"name": "開始時アニメーション",
-					"value": 907
-				},
-				{
-					"name": "タイムスタンプ",
-					"value": 911
-				},
-				{
-					"name": "修飾（ビーム）",
-					"value": 913
-				},
-				{
-					"name": "修飾（リング）",
-					"value": 915
-				},
-				{
-					"name": "キャラクター表示",
-					"value": 921
-				},
-				{
-					"name": "クリアランクイメージ表示パターン",
-					"value": 937
-				},
-				{
-					"name": "プレイ履歴の保存",
-					"value": 939
-				},
-				{
-					"name": "NOPLAYからのランプ更新保存",
-					"value": 941
-				},
-				{
-					"name": "キャラクターローテーション",
-					"value": 943
-				},
-				{
-					"name": "背景ローテーション",
-					"value": 945
-				},
-				{
-					"name": "背景表示パターン",
-					"value": 916
-				},
-				{
-					"name": "キャラクター表示パターン",
-					"value": 922
-				},
-				{
-					"name": "ステージファイル表示",
-					"value": 908
-				},
-				{
-					"name": "タイミンググラフ倍率",
-					"value": 931
-				},
-				{
-					"name": "タイミンググラフ配色パターン",
-					"value": 933
-				}
-			],
-			"file": [
-				{
-					"name": "クリアランクイメージ",
-					"path": "#default.png"
-				},
-				{
-					"name": "IRカバー",
-					"path": "#default.png"
-				},
-				{
-					"name": "ゲージ",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Clear）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Failed）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（ALL）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（AAA）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（AA）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（A）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（B）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（C）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（D）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（E）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（F）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Clear）",
-					"path": "yuki.png"
-				},
-				{
-					"name": "キャラクター（Failed）",
-					"path": "yuki.png"
-				},
-				{
-					"name": "キャラクター（ALL）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（AAA）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（AA）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（A）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（B）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（C）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（D）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（E）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（F）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Failed）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Assist）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（LaAssist）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Easy）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Normal and NoPlay）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Hard）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Exhard）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（FullCombo）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Perfect）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Max）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Failed）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Assist）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（LaAssist）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Easy）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Normal and NoPlay）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Hard）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Exhard）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（FullCombo）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Perfect）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Max）",
-					"path": "#default.png"
-				}
-			],
 			"offset": [
 				{
-					"name": "背景の明るさ 0~255 (255で真っ暗になります)",
+					"name": "Judge Position",
 					"x": 0,
 					"y": 0,
 					"w": 0,
@@ -3040,143 +1869,275 @@
 					"a": 0
 				},
 				{
-					"name": "キャラクター表示位置調整",
+					"name": "Combo Number Position",
 					"x": 0,
 					"y": 0,
 					"w": 0,
 					"h": 0,
 					"r": 0,
 					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/Pi_ECFN/RESULT/result.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "LEGACY_VER",
-					"value": 923
 				},
 				{
-					"name": "Playside",
-					"value": 918
+					"name": "F/S Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "ExtendFrame",
-					"value": 916
+					"name": "Target Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "LightBG",
-					"value": 920
+					"name": "Target2 Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "Stage_file",
-					"value": 930
+					"name": "Score Rate Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "シャッター",
-					"value": 940
+					"name": "Hit Error Visualizer Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "FS_list",
-					"value": 910
+					"name": "F/S Count Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "Particle",
-					"value": 912
+					"name": "Judgeline Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "CLEAR_EFFECT",
-					"value": 914
-				}
-			],
-			"file": [
-				{
-					"name": "---AAA",
-					"path": "Random"
+					"name": "Judgeline Height",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "---AA",
-					"path": "Random"
+					"name": "Bomb Position",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "---A",
-					"path": "Random"
+					"name": "Gauge Position and Size",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "---RANK",
-					"path": "DEFAULT.png"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/default/keyconfig/keyconfig.luaskin",
-		"properties": {
-			"option": [],
-			"file": [],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/default/skinselect/skinselect.luaskin",
-		"properties": {
-			"option": [],
-			"file": [],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/default/graderesult.json",
-		"properties": {
-			"option": [],
-			"file": [],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/default/play24.json",
-		"properties": {
-			"option": [
-				{
-					"name": "Lane Geometry",
-					"value": 920
+					"name": "Background Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "Score Graph",
-					"value": 900
+					"name": "BGA Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "Judge Count",
-					"value": 905
+					"name": "Barline Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
+					"name": "Judge PG Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "Theme",
-					"path": "blue.png"
+					"name": "Judge GR Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "Laser",
-					"path": "short.png"
+					"name": "Judge GD Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
 				},
 				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
+					"name": "Judge BD Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judge PR Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Judge MS Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Combo Number Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "F/S Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Target Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Target2 Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Score Rate Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Hit Error Visualizer Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Hit Error Visualizer BG Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "F/S Count Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Bomb Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
+				{
+					"name": "Gauge Transparency (-255 to 0)",
+					"x": 0,
+					"y": 0,
+					"w": 0,
+					"h": 0,
+					"r": 0,
+					"a": 0
+				},
 				{
 					"name": "All offset(%)",
 					"x": 0,
@@ -3214,411 +2175,6 @@
 					"a": 0
 				}
 			]
-		}
-	},
-	{
-		"path": "skin/ECFN/RESULT/course_result.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "LEGACY_VER",
-					"value": 923
-				},
-				{
-					"name": "Playside",
-					"value": 918
-				},
-				{
-					"name": "ExtendFrame",
-					"value": 916
-				},
-				{
-					"name": "LightBG",
-					"value": 920
-				},
-				{
-					"name": "Stage_file",
-					"value": 930
-				},
-				{
-					"name": "シャッター",
-					"value": 940
-				},
-				{
-					"name": "FS_list",
-					"value": 910
-				},
-				{
-					"name": "Particle",
-					"value": 912
-				},
-				{
-					"name": "CLEAR_EFFECT",
-					"value": 914
-				}
-			],
-			"file": [
-				{
-					"name": "---AAA",
-					"path": "Random"
-				},
-				{
-					"name": "---AA",
-					"path": "Random"
-				},
-				{
-					"name": "---A",
-					"path": "Random"
-				},
-				{
-					"name": "---RANK",
-					"path": "DEFAULT.png"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/default/play24double.json",
-		"properties": {
-			"option": [
-				{
-					"name": "Lane Geometry",
-					"value": 920
-				},
-				{
-					"name": "Judge Detail",
-					"value": 910
-				}
-			],
-			"file": [
-				{
-					"name": "Background",
-					"path": "play3.png"
-				},
-				{
-					"name": "Theme",
-					"path": "blue.png"
-				},
-				{
-					"name": "Laser",
-					"path": "short.png"
-				},
-				{
-					"name": "Lanecover",
-					"path": "lanecover4.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "All offset(%)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Notes offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "Judge Detail offset",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/ModernChic/course.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "画像フォント",
-					"value": 900
-				},
-				{
-					"name": "グラフ&スコア表示位置",
-					"value": 902
-				},
-				{
-					"name": "項目表示切り替え",
-					"value": 904
-				},
-				{
-					"name": "IRメニュー表示",
-					"value": 927
-				},
-				{
-					"name": "IRメニューの種類",
-					"value": 928
-				},
-				{
-					"name": "開始時アニメーション",
-					"value": 907
-				},
-				{
-					"name": "タイムスタンプ",
-					"value": 911
-				},
-				{
-					"name": "修飾（ビーム）",
-					"value": 913
-				},
-				{
-					"name": "修飾（リング）",
-					"value": 915
-				},
-				{
-					"name": "キャラクター表示",
-					"value": 921
-				},
-				{
-					"name": "クリアランクイメージ表示パターン",
-					"value": 937
-				},
-				{
-					"name": "プレイ履歴の保存",
-					"value": 939
-				},
-				{
-					"name": "NOPLAYからのランプ更新保存",
-					"value": 941
-				},
-				{
-					"name": "キャラクターローテーション",
-					"value": 943
-				},
-				{
-					"name": "背景ローテーション",
-					"value": 945
-				},
-				{
-					"name": "背景表示パターン",
-					"value": 916
-				},
-				{
-					"name": "キャラクター表示パターン",
-					"value": 922
-				}
-			],
-			"file": [
-				{
-					"name": "クリアランクイメージ",
-					"path": "#default.png"
-				},
-				{
-					"name": "IRカバー",
-					"path": "#default.png"
-				},
-				{
-					"name": "ゲージ",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Clear）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（Failed）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（ALL）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（AAA）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（AA）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（A）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（B）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（C）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（D）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（E）",
-					"path": "#default.png"
-				},
-				{
-					"name": "背景（F）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（Clear）",
-					"path": "yuki.png"
-				},
-				{
-					"name": "キャラクター（Failed）",
-					"path": "yuki.png"
-				},
-				{
-					"name": "キャラクター（ALL）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（AAA）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（AA）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（A）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（B）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（C）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（D）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（E）",
-					"path": "#default.png"
-				},
-				{
-					"name": "キャラクター（F）",
-					"path": "#default.png"
-				}
-			],
-			"offset": [
-				{
-					"name": "背景の明るさ 0~255 (255で真っ暗になります)",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				},
-				{
-					"name": "キャラクター表示位置調整",
-					"x": 0,
-					"y": 0,
-					"w": 0,
-					"h": 0,
-					"r": 0,
-					"a": 0
-				}
-			]
-		}
-	},
-	{
-		"path": "skin/Pi_ECFN/RESULT/course_result.luaskin",
-		"properties": {
-			"option": [
-				{
-					"name": "LEGACY_VER",
-					"value": 923
-				},
-				{
-					"name": "Playside",
-					"value": 918
-				},
-				{
-					"name": "ExtendFrame",
-					"value": 916
-				},
-				{
-					"name": "LightBG",
-					"value": 920
-				},
-				{
-					"name": "Stage_file",
-					"value": 930
-				},
-				{
-					"name": "シャッター",
-					"value": 940
-				},
-				{
-					"name": "FS_list",
-					"value": 910
-				},
-				{
-					"name": "Particle",
-					"value": 912
-				},
-				{
-					"name": "CLEAR_EFFECT",
-					"value": 914
-				}
-			],
-			"file": [
-				{
-					"name": "---AAA",
-					"path": "Random"
-				},
-				{
-					"name": "---AA",
-					"path": "Random"
-				},
-				{
-					"name": "---A",
-					"path": "Random"
-				},
-				{
-					"name": "---RANK",
-					"path": "DEFAULT.png"
-				}
-			],
-			"offset": []
-		}
-	},
-	{
-		"path": "skin/Pi_ECFN/select/select.json",
-		"properties": {
-			"option": [],
-			"file": [
-				{
-					"name": "Background",
-					"path": "Random"
-				}
-			],
-			"offset": []
 		}
 	}
 ],
@@ -3652,7 +2208,7 @@
 			"mouseScratchDistance": 12,
 			"mouseScratchMode": 0
 		},
-		"keys": [ 54, 47, 52, 32, 31, 59, 129 ],
+		"keys": [ 29, 47, 32, 34, 35, 59, 57 ],
 		"start": 45,
 		"select": 51,
 		"duration": 16
@@ -3693,23 +2249,23 @@
 },
 "mode7": {
 	"playconfig": {
-		"hispeed": 6,
-		"duration": 468,
+		"hispeed": 1,
+		"duration": 500,
 		"enableConstant": false,
 		"constantFadeinTime": 100,
 		"fixhispeed": 3,
 		"hispeedmargin": 0.25,
-		"lanecover": 0.27,
+		"lanecover": 0.2,
 		"enablelanecover": true,
-		"lift": 0.245,
-		"enablelift": true,
+		"lift": 0.1,
+		"enablelift": false,
 		"hidden": 0.1,
 		"enablehidden": false,
 		"lanecovermarginlow": 0.001,
 		"lanecovermarginhigh": 0.01,
 		"lanecoverswitchduration": 500,
-		"hispeedautoadjust": true,
-		"judgetype": "Lowest"
+		"hispeedautoadjust": false,
+		"judgetype": "Combo"
 	},
 	"keyboard": {
 		"mouseScratchConfig": {
@@ -3721,22 +2277,22 @@
 			"mouseScratchDistance": 12,
 			"mouseScratchMode": 0
 		},
-		"keys": [ -1, -1, -1, -1, -1, -1, -1, -1, -1 ],
+		"keys": [ 29, 47, 32, 62, 40, 74, 75, 59, 57 ],
 		"start": 45,
 		"select": 51,
 		"duration": 16
 	},
 	"controller": [
 		{
-			"name": "PowerA Controller INF&BMS",
-			"keys": [ 0, 1, 2, 3, 4, 5, 6, 32, 33 ],
+			"name": "",
+			"keys": [ -1, -1, -1, -1, -1, -1, -1, -1, -1 ],
 			"start": 8,
 			"select": 9,
 			"duration": 16,
 			"jkoc_hack": false,
-			"analogScratch": true,
+			"analogScratch": false,
 			"analogScratchMode": 0,
-			"analogScratchThreshold": 100
+			"analogScratchThreshold": 50
 		}
 	],
 	"midi": {
@@ -3886,7 +2442,7 @@
 	},
 	"controller": [
 		{
-			"name": "PowerA Controller INF&BMS",
+			"name": "",
 			"keys": [ -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 ],
 			"start": 8,
 			"select": 9,
@@ -4461,8 +3017,8 @@
 "showhiddennote": false,
 "showpastnote": false,
 "chartPreview": true,
-"sort": 0,
-"sortid": "TITLE",
+"sort": 6,
+"sortid": "SCORE",
 "musicselectinput": 0,
 "irconfig": [],
 "twitterConsumerKey": null,
