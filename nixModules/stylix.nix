@@ -4,7 +4,6 @@
     enable = true;
     base16Scheme = ../theme/BBPP.yaml;
     image = ../theme/wallpaper.png;
-    #targets.vesktop.enable = false;
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
@@ -19,10 +18,5 @@
 	name = "DejaVu Serif";
       };
     };
-#    cursor = {
-#      package = pkgs.bibata-cursors;
-#      name = "Bibata-Modern-Classic";
-#      size = 12;
-#    };
-};
+  };
 }

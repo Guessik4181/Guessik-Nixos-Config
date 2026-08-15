@@ -12,6 +12,8 @@
     xdg-utils
     zenity
 
+    # Instant status updates
+    acpid
 
     # get detailed hardware information
     lshw
@@ -28,6 +30,9 @@
 
     ### Hardware and Peripherals ###
 
+    # Anything to do with sound
+    alsa-utils
+    pamixer
     # Open-source CLI tool to manage headset settings
     headsetcontrol
     # volume control GUI
@@ -45,6 +50,8 @@
 
     ### Data manipulation ###
 
+    # file menager
+    kdePackages.dolphin
     # wayland clipboard utilities
     wl-clipboard
     # Open-source office suite
@@ -65,13 +72,13 @@
     #ventoy
 
     ### Alternate browsers ###
-    firefox
+    librewolf
 
     ### Security ###
     # Password Manager
     #bitwarden-desktop
     # VPN
-    proton-vpn
+    #proton-vpn
 
     ### Games/Emulation ###
     # Wine Emulator
@@ -95,7 +102,7 @@
     # Recording
     obs-studio
     # Music
-    spotify
+    musicpod
     #audio
     ardour
     audacity

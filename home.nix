@@ -14,6 +14,8 @@
     homeModules/xdg-autostart.nix
     # Java
     homeModules/java.nix
+    # AwesomeWm
+    homeModules/HomeAwesome.nix
 
     ### basic programs ###
 
@@ -39,9 +41,12 @@
     homeModules/homePackages.nix
 
     ###Additional programs###
+    #idk why I keep vscode
     homeModules/vscode.nix
     homeModules/obsOverlay.nix
     homeModules/KDEconnect.nix
+    #Screen shooting tool
+    homeModules/Flameshot.nix
 
   ] ++ lib.optionals (systemSettings.hostname == "guessik") [
 
@@ -68,7 +73,4 @@
 
   # Custom Cursor
   home.file.".icons/Chiharu".source = ./theme/Chiharu;
-
-  home.file.".config/awesome" = {source = ./awesome; recursive = true;};
-  #gtk.cursorTheme.name = "Chiharu";
-}
+  }

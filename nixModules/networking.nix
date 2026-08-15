@@ -7,6 +7,7 @@
   
   networking.firewall = rec {
   allowedTCPPorts = [25565]; #minecraft
+  # port ranges for kde connect
   allowedTCPPortRanges = [ { from = 1714; to = 1764; } ];
   allowedUDPPortRanges = allowedTCPPortRanges;
 };

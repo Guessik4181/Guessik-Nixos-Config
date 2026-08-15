@@ -18,28 +18,15 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
--- load the widget code
-local volume_control = require("volume-control")
-
 
 -- define your volume control, using default settings:
 volumecfg = volume_control({device="pulse"})
 
 
--- add the widget to your wibox
-...
-right_layout:add(volumecfg.widget)
-...
+-- add the widget to your wibox for older versions of awesome, for newer you gotta do it in around line 219 where the wibox thingy is
 
+-- right_layout:add(volumecfg.widget)
 
--- add key bindings
-local globalkeys = awful.util.table.join(
-    ...
-    awful.key({}, "XF86AudioRaiseVolume", function() volumecfg:up() end),
-    awful.key({}, "XF86AudioLowerVolume", function() volumecfg:down() end),
-    awful.key({}, "XF86AudioMute",        function() volumecfg:toggle() end),
-    ...
-)
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -71,8 +58,8 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "xterm"
-editor = os.getenv("EDITOR") or "nano"
+terminal = "kitty"
+editor = os.getenv("EDITOR") or "kate"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -219,7 +206,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 26 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -349,7 +336,27 @@ globalkeys = gears.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+
+    -- USER ADDED KEYBINDS
+    awful.spawn.with_shell("pamixer -i 5")
+
+    -- File manager
+    awful.key({ modkey }, "e", function ()
+    awful.spawn("dolphin")
+    end, {description = "open file manager", group = "launcher"}),
+
+    -- Volume control
+    awful.key({}, "XF86AudioRaiseVolume", function()
+        awful.spawn.with_shell("pamixer -i 5") end),
+
+    awful.key({}, "XF86AudioLowerVolume", function()
+        awful.spawn.with_shell("pamixer -d 5") end),
+
+    awful.key({}, "XF86AudioMute", function()
+        awful.spawn.with_shell("pamixer --toggle-mute") end)
+
 )
 
 clientkeys = gears.table.join(
