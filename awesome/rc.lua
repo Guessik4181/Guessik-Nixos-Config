@@ -19,14 +19,6 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 
 
--- define your volume control, using default settings:
-volumecfg = volume_control({device="pulse"})
-
-
--- add the widget to your wibox for older versions of awesome, for newer you gotta do it in around line 219 where the wibox thingy is
-
--- right_layout:add(volumecfg.widget)
-
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -340,7 +332,11 @@ globalkeys = gears.table.join(
 
 
     -- USER ADDED KEYBINDS
-    awful.spawn.with_shell("pamixer -i 5")
+
+    -- Music player
+    awful.key({ "Control", modkey }, "r", function ()
+    awful.spawn("musicpod")
+    end, {description = "open music launcher", group = "launcher"}),
 
     -- File manager
     awful.key({ modkey }, "e", function ()
