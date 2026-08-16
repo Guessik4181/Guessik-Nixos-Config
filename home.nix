@@ -43,7 +43,6 @@
     ###Additional programs###
     #idk why I keep vscode
     homeModules/vscode.nix
-    homeModules/obsOverlay.nix
     homeModules/KDEconnect.nix
     #Screen shooting tool
     homeModules/Flameshot.nix
