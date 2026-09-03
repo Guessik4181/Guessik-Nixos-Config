@@ -1,9 +1,10 @@
 {pkgs-stable, ... }:
 {
-  stylix.targets = {
-    vesktop.enable = false;
-    vencord.enable = false;
-  };
+
+#     stylix.targets = {
+#     vesktop.enable = false;
+#     vencord.enable = false;
+#   };
 
   programs.vesktop = {
     enable = true;
@@ -55,7 +56,7 @@
         };
         VolumeBooster = {
           enabled = true;
-          multiplier = 1;
+          multiplier = 3;
         };
       };
     };

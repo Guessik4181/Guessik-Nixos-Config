@@ -44,8 +44,7 @@
     #idk why I keep vscode
     homeModules/vscode.nix
     homeModules/KDEconnect.nix
-    #Screen shooting tool
-    homeModules/Flameshot.nix
+
 
   ] ++ lib.optionals (systemSettings.hostname == "guessik") [
 

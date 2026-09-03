@@ -334,7 +334,7 @@ globalkeys = gears.table.join(
     -- USER ADDED KEYBINDS
 
     -- Music player
-    awful.key({ "Control", modkey }, "r", function ()
+    awful.key({ "Shift", modkey }, "r", function ()
     awful.spawn("musicpod")
     end, {description = "open music launcher", group = "launcher"}),
 
@@ -351,8 +351,12 @@ globalkeys = gears.table.join(
         awful.spawn.with_shell("pamixer -d 5") end),
 
     awful.key({}, "XF86AudioMute", function()
-        awful.spawn.with_shell("pamixer --toggle-mute") end)
+        awful.spawn.with_shell("pamixer --toggle-mute") end),
 
+    -- Screenshot
+    awful.key({ modkey, "Shift"  }, "s", function ()
+    awful.spawn("flameshot gui")
+    end, {description = "run flameshot", group = "hotkey"})
 )
 
 clientkeys = gears.table.join(
