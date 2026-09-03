@@ -16,6 +16,8 @@
     homeModules/java.nix
     # AwesomeWm
     homeModules/HomeAwesome.nix
+    # Awesome wm theme through stylix
+    homeModules/AwesomeStylix.nix
 
     ### basic programs ###
 
