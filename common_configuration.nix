@@ -23,7 +23,7 @@
     nixModules/users/user_guessik.nix
 
     ### Theming ###
-    #nixModules/stylix.nix
+    nixModules/stylix.nix
 
     ### Fonts ###
     nixModules/fonts.nix
