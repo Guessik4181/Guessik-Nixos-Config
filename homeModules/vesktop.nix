@@ -1,10 +1,10 @@
 {pkgs-stable, ... }:
 {
 
-#     stylix.targets = {
-#     vesktop.enable = false;
-#     vencord.enable = false;
-#   };
+    stylix.targets = {
+    vesktop.enable = false;
+    vencord.enable = false;
+  };
 
   programs.vesktop = {
     enable = true;
