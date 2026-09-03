@@ -107,7 +107,7 @@
     ardour
     audacity
     #screenshot
-    kdePackages.spectacle
+    flameshot
 
 
     ### Backup Utility ###
