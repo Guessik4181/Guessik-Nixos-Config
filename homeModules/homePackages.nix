@@ -106,6 +106,8 @@
     #audio
     ardour
     audacity
+    #screenshot
+    kdePackages.spectacle
 
 
     ### Backup Utility ###
