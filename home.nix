@@ -4,12 +4,8 @@
   imports = [
     ### environment ###
 
-    # taskbar
-    homeModules/waybar.nix
     # menu generator
     homeModules/rofi.nix
-    # notification daemon
-    homeModules/mako.nix
     # window portal
     homeModules/xdg-autostart.nix
     # Java
