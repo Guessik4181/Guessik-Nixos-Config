@@ -17,7 +17,6 @@
         luadbi-mysql # Database abstraction layer
         vicious
         luafilesystem
-        luadoc
       ];
     };
   };
