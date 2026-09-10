@@ -15,7 +15,7 @@ local stylix = dofile(
 
 local theme = {}
 
-theme.font          = "sans 13"
+theme.font          = "sans 10"
 
 theme.bg_normal     = stylix.base00
 theme.bg_focus      = stylix.base01
