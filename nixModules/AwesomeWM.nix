@@ -2,6 +2,7 @@
 {
   services.displayManager = {
     sddm.enable = true;
+    sddm.wayland.enable = false;
     defaultSession = "none+awesome";
   };
 
@@ -16,6 +17,7 @@
         luadbi-mysql # Database abstraction layer
         vicious
         luafilesystem
+        luadoc
       ];
     };
   };

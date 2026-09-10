@@ -1,12 +1,12 @@
 {
 "id": "player1",
 "name": "Guessik",
-"gauge": 0,
+"gauge": 3,
 "random": 0,
 "random2": 0,
 "doubleoption": 0,
 "chartReplicationMode": "RIVALCHART",
-"targetid": "MAX",
+"targetid": "RATE_AA",
 "targetlist": [
 	"RATE_A-",
 	"RATE_A",
@@ -76,7 +76,7 @@
 "showjudgearea": false,
 "markprocessednote": false,
 "hranThresholdBPM": 120,
-"gaugeAutoShift": 0,
+"gaugeAutoShift": 2,
 "bottomShiftableGauge": 0,
 "autosavereplay": [ 0, 0, 0, 0 ],
 "sevenToNinePattern": 0,
@@ -100,7 +100,7 @@
 				},
 				{
 					"name": "Lane Frame",
-					"value": 905
+					"value": 904
 				},
 				{
 					"name": "Lane Center",
@@ -108,11 +108,11 @@
 				},
 				{
 					"name": "Notes Width",
-					"value": 908
+					"value": 909
 				},
 				{
 					"name": "Notes Height",
-					"value": 917
+					"value": 922
 				},
 				{
 					"name": "Judge Display",
@@ -128,11 +128,11 @@
 				},
 				{
 					"name": "Keybeam Height Multiplier",
-					"value": 927
+					"value": 930
 				},
 				{
 					"name": "Keybeam Alpha Multiplier",
-					"value": 932
+					"value": 935
 				},
 				{
 					"name": "Target",
@@ -152,7 +152,7 @@
 				},
 				{
 					"name": "Fast/Slow Type",
-					"value": 944
+					"value": 946
 				},
 				{
 					"name": "Fast/Slow Counter",
@@ -176,7 +176,7 @@
 				},
 				{
 					"name": "Hi-Speed Type",
-					"value": 960
+					"value": 961
 				},
 				{
 					"name": "Mascot Display",
@@ -194,11 +194,11 @@
 				},
 				{
 					"name": "Temeplate_7key : White-Notes",
-					"path": "White_#Bordered_#f3f3f3.png"
+					"path": "Purple_#Bordered_#a254e5.png"
 				},
 				{
 					"name": "Temeplate_7key : White-Long-Start",
-					"path": "White_#Partition_#f3f3f3.png"
+					"path": "Purple_#Partition_#a254e5.png"
 				},
 				{
 					"name": "Temeplate_7key : White-Long-End",
@@ -206,11 +206,11 @@
 				},
 				{
 					"name": "Temeplate_7key : White-Long-Body",
-					"path": "White_#Partition_#f3f3f3.png"
+					"path": "Purple_#Partition_#a254e5.png"
 				},
 				{
 					"name": "Temeplate_7key : White-Long-Active",
-					"path": "White_#Partition_#f3f3f3.png"
+					"path": "Purple_#Partition_#a254e5.png"
 				},
 				{
 					"name": "Temeplate_7key : White-Mine",
@@ -290,11 +290,11 @@
 				},
 				{
 					"name": "Custom : White-Notes",
-					"path": "White_#f3f3f3.png"
+					"path": "LightBlue_#35eaff.png"
 				},
 				{
 					"name": "Custom : White-Long-Start",
-					"path": "White_#f3f3f3.png"
+					"path": "LightBlue_#35eaff.png"
 				},
 				{
 					"name": "Custom : White-Long-End",
@@ -302,11 +302,11 @@
 				},
 				{
 					"name": "Custom : White-Long-Body",
-					"path": "White_#f3f3f3.png"
+					"path": "LightBlue_#35eaff.png"
 				},
 				{
 					"name": "Custom : White-Long-Active",
-					"path": "White_#f3f3f3.png"
+					"path": "LightBlue_#35eaff.png"
 				},
 				{
 					"name": "Custom : White-Mine",
@@ -314,11 +314,11 @@
 				},
 				{
 					"name": "Custom : Blue-Notes",
-					"path": "LightBlue_#35eaff.png"
+					"path": "Purple_#a254e5.png"
 				},
 				{
 					"name": "Custom : Blue-Long-Start",
-					"path": "LightBlue_#35eaff.png"
+					"path": "Purple_#a254e5.png"
 				},
 				{
 					"name": "Custom : Blue-Long-End",
@@ -326,11 +326,11 @@
 				},
 				{
 					"name": "Custom : Blue-Long-Body",
-					"path": "LightBlue_#35eaff.png"
+					"path": "Purple_#a254e5.png"
 				},
 				{
 					"name": "Custom : Blue-Long-Active",
-					"path": "LightBlue_#35eaff.png"
+					"path": "Purple_#a254e5.png"
 				},
 				{
 					"name": "Custom : Blue-Mine",
@@ -402,19 +402,19 @@
 				},
 				{
 					"name": "Custom : White-Keybeam",
-					"path": "Blue.png"
+					"path": "Off.png"
 				},
 				{
 					"name": "Custom : Blue-Keybeam",
-					"path": "Blue.png"
+					"path": "Off.png"
 				},
 				{
 					"name": "Custom : Yellow-Keybeam",
-					"path": "Blue.png"
+					"path": "Off.png"
 				},
 				{
 					"name": "Custom : Scratch-Keybeam",
-					"path": "Blue.png"
+					"path": "Off.png"
 				},
 				{
 					"name": "Type A_B : Judge & Combo Number",
@@ -505,7 +505,7 @@
 				{
 					"name": "Judge Position",
 					"x": 0,
-					"y": 0,
+					"y": 150,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -514,7 +514,7 @@
 				{
 					"name": "Combo Number Position",
 					"x": 0,
-					"y": 0,
+					"y": 150,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -532,7 +532,7 @@
 				{
 					"name": "Target Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -541,7 +541,7 @@
 				{
 					"name": "Target2 Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -550,7 +550,7 @@
 				{
 					"name": "Score Rate Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -559,7 +559,7 @@
 				{
 					"name": "Hit Error Visualizer Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -568,7 +568,7 @@
 				{
 					"name": "F/S Count Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -617,7 +617,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "BGA Transparency (-255 to 0)",
@@ -626,7 +626,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "Barline Transparency (-255 to 0)",
@@ -716,7 +716,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "Target2 Transparency (-255 to 0)",
@@ -725,7 +725,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "Score Rate Transparency (-255 to 0)",
@@ -734,7 +734,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "Hit Error Visualizer Transparency (-255 to 0)",
@@ -1457,7 +1457,7 @@
 				},
 				{
 					"name": "Lane Frame",
-					"value": 905
+					"value": 904
 				},
 				{
 					"name": "Lane Center",
@@ -1465,11 +1465,11 @@
 				},
 				{
 					"name": "Notes Width",
-					"value": 908
+					"value": 909
 				},
 				{
 					"name": "Notes Height",
-					"value": 917
+					"value": 922
 				},
 				{
 					"name": "Judge Display",
@@ -1485,11 +1485,11 @@
 				},
 				{
 					"name": "Keybeam Height Multiplier",
-					"value": 927
+					"value": 930
 				},
 				{
 					"name": "Keybeam Alpha Multiplier",
-					"value": 932
+					"value": 935
 				},
 				{
 					"name": "Target",
@@ -1509,7 +1509,7 @@
 				},
 				{
 					"name": "Fast/Slow Type",
-					"value": 944
+					"value": 946
 				},
 				{
 					"name": "Fast/Slow Counter",
@@ -1533,7 +1533,7 @@
 				},
 				{
 					"name": "Hi-Speed Type",
-					"value": 960
+					"value": 961
 				},
 				{
 					"name": "Mascot Display",
@@ -1551,11 +1551,11 @@
 				},
 				{
 					"name": "Temeplate_7key : White-Notes",
-					"path": "White_#Bordered_#f3f3f3.png"
+					"path": "Purple_#Bordered_#a254e5.png"
 				},
 				{
 					"name": "Temeplate_7key : White-Long-Start",
-					"path": "White_#Partition_#f3f3f3.png"
+					"path": "Purple_#Partition_#a254e5.png"
 				},
 				{
 					"name": "Temeplate_7key : White-Long-End",
@@ -1563,11 +1563,11 @@
 				},
 				{
 					"name": "Temeplate_7key : White-Long-Body",
-					"path": "White_#Partition_#f3f3f3.png"
+					"path": "Purple_#Partition_#a254e5.png"
 				},
 				{
 					"name": "Temeplate_7key : White-Long-Active",
-					"path": "White_#Partition_#f3f3f3.png"
+					"path": "Purple_#Partition_#a254e5.png"
 				},
 				{
 					"name": "Temeplate_7key : White-Mine",
@@ -1647,11 +1647,11 @@
 				},
 				{
 					"name": "Custom : White-Notes",
-					"path": "White_#f3f3f3.png"
+					"path": "LightBlue_#35eaff.png"
 				},
 				{
 					"name": "Custom : White-Long-Start",
-					"path": "White_#f3f3f3.png"
+					"path": "LightBlue_#35eaff.png"
 				},
 				{
 					"name": "Custom : White-Long-End",
@@ -1659,11 +1659,11 @@
 				},
 				{
 					"name": "Custom : White-Long-Body",
-					"path": "White_#f3f3f3.png"
+					"path": "LightBlue_#35eaff.png"
 				},
 				{
 					"name": "Custom : White-Long-Active",
-					"path": "White_#f3f3f3.png"
+					"path": "LightBlue_#35eaff.png"
 				},
 				{
 					"name": "Custom : White-Mine",
@@ -1671,11 +1671,11 @@
 				},
 				{
 					"name": "Custom : Blue-Notes",
-					"path": "LightBlue_#35eaff.png"
+					"path": "Purple_#a254e5.png"
 				},
 				{
 					"name": "Custom : Blue-Long-Start",
-					"path": "LightBlue_#35eaff.png"
+					"path": "Purple_#a254e5.png"
 				},
 				{
 					"name": "Custom : Blue-Long-End",
@@ -1683,11 +1683,11 @@
 				},
 				{
 					"name": "Custom : Blue-Long-Body",
-					"path": "LightBlue_#35eaff.png"
+					"path": "Purple_#a254e5.png"
 				},
 				{
 					"name": "Custom : Blue-Long-Active",
-					"path": "LightBlue_#35eaff.png"
+					"path": "Purple_#a254e5.png"
 				},
 				{
 					"name": "Custom : Blue-Mine",
@@ -1759,19 +1759,19 @@
 				},
 				{
 					"name": "Custom : White-Keybeam",
-					"path": "Blue.png"
+					"path": "Off.png"
 				},
 				{
 					"name": "Custom : Blue-Keybeam",
-					"path": "Blue.png"
+					"path": "Off.png"
 				},
 				{
 					"name": "Custom : Yellow-Keybeam",
-					"path": "Blue.png"
+					"path": "Off.png"
 				},
 				{
 					"name": "Custom : Scratch-Keybeam",
-					"path": "Blue.png"
+					"path": "Off.png"
 				},
 				{
 					"name": "Type A_B : Judge & Combo Number",
@@ -1862,7 +1862,7 @@
 				{
 					"name": "Judge Position",
 					"x": 0,
-					"y": 0,
+					"y": 150,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -1871,7 +1871,7 @@
 				{
 					"name": "Combo Number Position",
 					"x": 0,
-					"y": 0,
+					"y": 150,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -1889,7 +1889,7 @@
 				{
 					"name": "Target Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -1898,7 +1898,7 @@
 				{
 					"name": "Target2 Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -1907,7 +1907,7 @@
 				{
 					"name": "Score Rate Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -1916,7 +1916,7 @@
 				{
 					"name": "Hit Error Visualizer Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -1925,7 +1925,7 @@
 				{
 					"name": "F/S Count Position",
 					"x": 0,
-					"y": 0,
+					"y": 2000,
 					"w": 0,
 					"h": 0,
 					"r": 0,
@@ -1974,7 +1974,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "BGA Transparency (-255 to 0)",
@@ -1983,7 +1983,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "Barline Transparency (-255 to 0)",
@@ -2073,7 +2073,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "Target2 Transparency (-255 to 0)",
@@ -2082,7 +2082,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "Score Rate Transparency (-255 to 0)",
@@ -2091,7 +2091,7 @@
 					"w": 0,
 					"h": 0,
 					"r": 0,
-					"a": 0
+					"a": -255
 				},
 				{
 					"name": "Hit Error Visualizer Transparency (-255 to 0)",
@@ -2176,6 +2176,57 @@
 				}
 			]
 		}
+	},
+	{
+		"path": "skin/default/select.json",
+		"properties": {
+			"option": [],
+			"file": [
+				{
+					"name": "Background",
+					"path": "select3.png"
+				}
+			],
+			"offset": []
+		}
+	},
+	{
+		"path": "skin/Pi_ECFN/select/select.luaskin",
+		"properties": {
+			"option": [
+				{
+					"name": "シャッター",
+					"value": 910
+				},
+				{
+					"name": "動画を使用する",
+					"value": 920
+				},
+				{
+					"name": "判定詳細ウィンドウを使用する",
+					"value": 940
+				},
+				{
+					"name": "IRウィンドウを使用する",
+					"value": 930
+				},
+				{
+					"name": "IRウィンドウ位置",
+					"value": 932
+				}
+			],
+			"file": [
+				{
+					"name": "BG",
+					"path": "Default.png"
+				},
+				{
+					"name": "MV",
+					"path": "default-Pink.mp4"
+				}
+			],
+			"offset": []
+		}
 	}
 ],
 "mode5": {
@@ -2249,14 +2300,14 @@
 },
 "mode7": {
 	"playconfig": {
-		"hispeed": 1,
-		"duration": 500,
+		"hispeed": 2.75,
+		"duration": 415,
 		"enableConstant": false,
 		"constantFadeinTime": 100,
 		"fixhispeed": 3,
 		"hispeedmargin": 0.25,
-		"lanecover": 0.2,
-		"enablelanecover": true,
+		"lanecover": 0.154,
+		"enablelanecover": false,
 		"lift": 0.1,
 		"enablelift": false,
 		"hidden": 0.1,
@@ -2280,7 +2331,7 @@
 		"keys": [ 29, 47, 32, 62, 40, 74, 75, 59, 57 ],
 		"start": 45,
 		"select": 51,
-		"duration": 16
+		"duration": 18
 	},
 	"controller": [
 		{
@@ -2288,7 +2339,7 @@
 			"keys": [ -1, -1, -1, -1, -1, -1, -1, -1, -1 ],
 			"start": 8,
 			"select": 9,
-			"duration": 16,
+			"duration": 18,
 			"jkoc_hack": false,
 			"analogScratch": false,
 			"analogScratchMode": 0,
@@ -3017,10 +3068,21 @@
 "showhiddennote": false,
 "showpastnote": false,
 "chartPreview": true,
-"sort": 6,
-"sortid": "SCORE",
+"sort": 4,
+"sortid": "LEVEL",
 "musicselectinput": 0,
-"irconfig": [],
+"irconfig": [
+	{
+		"irname": "Bokutachi IR",
+		"userid": "",
+		"cuserid": "Uv00PjzSVwj5oFkkvQDRqw==",
+		"password": "",
+		"cpassword": "FZ6HYKJY+tcLLk7F05oubAnX28bL65Gl0s48NKxkoGRaYXcEqMrXFFm+8O9UoKR/",
+		"irsend": 0,
+		"importscore": false,
+		"importrival": true
+	}
+],
 "twitterConsumerKey": null,
 "twitterConsumerSecret": null,
 "twitterAccessToken": null,
