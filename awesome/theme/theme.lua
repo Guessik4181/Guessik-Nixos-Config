@@ -9,29 +9,26 @@ local dpi = xresources.apply_dpi
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
 
-local stylix = dofile(
-    os.getenv("HOME") .. "/.config/awesome-stylix-colors.lua"
-)
 
 local theme = {}
 
 theme.font          = "sans 10"
 
-theme.bg_normal     = stylix.base00
-theme.bg_focus      = stylix.base01
-theme.bg_urgent     = stylix.base08
-theme.bg_minimize   = stylix.base02
+theme.bg_normal     = "#08060D" -- base00
+theme.bg_focus      = "#1A1028" -- base02
+theme.bg_urgent     = "#B83D76" -- base08
+theme.bg_minimize   = "#100B18" -- base01
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = stylix.base05
-theme.fg_focus      = stylix.base06
-theme.fg_urgent     = stylix.base08
-theme.fg_minimize   = stylix.base06
+theme.fg_normal     = "#B7A9C7" -- base05
+theme.fg_focus      = "#F4EFFA" -- base07
+theme.fg_urgent     = "#F4EFFA" -- base07
+theme.fg_minimize   = "#756483" -- base04
 
 theme.useless_gap   = dpi(0)
 theme.border_width  = dpi(1)
-theme.border_normal = stylix.base00
-theme.border_focus  = stylix.base07
+theme.border_normal = "#100B18" -- base01
+theme.border_focus  = "#9B59D0" -- base0E
 
 -- There are other variable sets
 -- overriding the default one when

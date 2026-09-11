@@ -64,6 +64,8 @@
     zip
     unzip
     p7zip
+    # Archiving files
+    kdePackages.ark
     # Ebook Reader
     foliate
     # drag and drop utility
@@ -108,6 +110,8 @@
     audacity
     #screenshot
     flameshot
+    #image editing
+    gimp-with-plugins
 
 
     ### Backup Utility ###

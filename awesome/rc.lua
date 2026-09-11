@@ -356,7 +356,11 @@ globalkeys = gears.table.join(
     -- Screenshot
     awful.key({ modkey, "Shift"  }, "s", function ()
     awful.spawn("flameshot gui")
-    end, {description = "run flameshot", group = "hotkey"})
+    end, {description = "run flameshot", group = "hotkey"}),
+
+    -- Brightness manipulation
+awful.key({}, "XF86MonBrightnessUp", function () brightness_widget:inc() end, {description = "increase brightness", group = "custom"}),
+awful.key({}, "XF86MonBrightnessDown", function ()brightness_widget:dec() end, {description = "decrease brightness", group = "custom"})
 )
 
 clientkeys = gears.table.join(
